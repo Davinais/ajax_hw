@@ -36,7 +36,7 @@ $(function() {
     });
     $("#search_btn").click((event) => {
         event.preventDefault();
-        let stu_id = $("#search>input").val();
+        let stu_id = $("#search input").val();
         stu_id = escapeHtml(stu_id);
         $.ajax({
             url: "ajax.php",
@@ -51,9 +51,9 @@ $(function() {
     //Seems like jQuery has done encodeURI for us
     $("#add_btn").click((event) => {
         event.preventDefault();
-        let stu_id = $("#add>input[name=id]").val();
+        let stu_id = $("#add input[name=id]").val();
         stu_id = escapeHtml(stu_id);
-        let stu_name = $("#add>input[name=name]").val();
+        let stu_name = $("#add input[name=name]").val();
         stu_name = escapeHtml(stu_name);
         $.ajax({
             url: "ajax.php",
@@ -67,7 +67,7 @@ $(function() {
     });
     $("#del_btn").click((event) => {
         event.preventDefault();
-        let stu_id = $("#delete>input[name=id]").val();
+        let stu_id = $("#delete input[name=id]").val();
         stu_id = escapeHtml(stu_id);
         $.ajax({
             url: "ajax.php",
